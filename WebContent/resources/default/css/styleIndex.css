@@ -1,0 +1,99 @@
+@charset "ISO-8859-1";
+
+#img_museum {
+	width: 100px;
+	height: 70px;
+	margin-bottom: 25px;
+	margin-left: 70px;
+	margin-top: 15px;
+}
+
+nav {
+	border-bottom: 2px solid #A4A4A4;
+}
+
+#title {
+	text-decoration: none;
+	font-size: 25px;
+	font-weight: bold;
+	color: black;
+}
+
+.cls {
+	color: white;
+}
+
+/* SideBar */
+#sideBar-wrapper {
+	z-index: 1;
+	position: absolute;
+	width: 0;
+	height: 100%;
+	overflow-y: hidden;
+	background: #f8f9fa;
+	opacity: 0.9; 
+	
+}
+
+/* ContentPage */
+#page-content-wrapper {
+	width: 100%;
+	position: absolute;
+	padding : 15px;
+}
+
+#wrapper.menuDisplayed #sideBar-wrapper {
+	width: 250px;
+}
+
+#wrapper.menuDisplayed #page-content-wrapper {
+	padding-left: 250px;
+}
+
+
+
+.fa { 
+    color: #A4A4A4;
+}
+
+.cmb {
+	width: 225px;
+	height: 40px;
+	border: none;
+	font-weight: bold;
+	text-align: left;
+	font-size: 20px;
+	color: #6E6E6E;
+}
+
+#username, #password {
+	border: none;
+	border-bottom: 2px solid #A4A4A4;
+	outline: none;
+	height: 40px;
+	font-size: 16px;
+	width: 300px;
+	margin-bottom: 15px;
+	background: transparent;
+	box-sizing: border-box;
+}
+
+.ui-dialog {
+	border-radius: inherit;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+   background: white;
+}
+
+
+/************* ADMIN HOME PAGE *************/
+
+#article, #personnel {
+	width: 500px;
+	height: 500px;
+	float: left;
+}
+
+
+

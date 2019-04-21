@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#Acceuil.xhtml" PATH="/Acceuil.xhtml"
+  SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#Acceuil.xhtml:0" NAME="item"
+   PATH="/Acceuil.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="actualite::#Acceuil.xhtml" NAME="output"
+    PATH="/Acceuil.xhtml" TARGET="rules:#Acceuil.xhtml"
+    TITLE="actualite" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="inscription::#inscription.xhtml"
+    NAME="output1" PATH="/inscription.xhtml"
+    TARGET="rules:#inscription.xhtml" TITLE="inscription" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="success::#VisiteurHomePage.xhtml"
+    NAME="output2" PATH="/VisiteurHomePage.xhtml"
+    TARGET="rules:#VisiteurHomePage.xhtml" TITLE="success" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="admin::#AdminHomePage.xhtml" NAME="output3"
+    PATH="/AdminHomePage.xhtml" TARGET="rules:#AdminHomePage.xhtml"
+    TITLE="admin" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#inscription.xhtml" PATH="/inscription.xhtml"
+  SHAPE="256,33,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#inscription.xhtml:0" NAME="item"
+   PATH="/inscription.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="success::#VisiteurHomePage.xhtml"
+    NAME="output" PATH="/VisiteurHomePage.xhtml"
+    TARGET="rules:#VisiteurHomePage.xhtml" TITLE="success" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="admin::#AdminHomePage.xhtml" NAME="output1"
+    PATH="/AdminHomePage.xhtml" TARGET="rules:#AdminHomePage.xhtml"
+    TITLE="admin" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="inscription::#inscription.xhtml"
+    NAME="output2" PATH="/inscription.xhtml"
+    TARGET="rules:#inscription.xhtml" TITLE="inscription" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="actualite::#Acceuil.xhtml" NAME="output3"
+    PATH="/Acceuil.xhtml" TARGET="rules:#Acceuil.xhtml"
+    TITLE="actualite" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#VisiteurHomePage.xhtml"
+  PATH="/VisiteurHomePage.xhtml" SHAPE="272,209,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#VisiteurHomePage.xhtml:0" NAME="item"
+   PATH="/VisiteurHomePage.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="inscription::#inscription.xhtml"
+    NAME="output" PATH="/inscription.xhtml"
+    TARGET="rules:#inscription.xhtml" TITLE="inscription" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="success::#VisiteurHomePage.xhtml"
+    NAME="output1" PATH="/VisiteurHomePage.xhtml"
+    TARGET="rules:#VisiteurHomePage.xhtml" TITLE="success" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="admin::#AdminHomePage.xhtml" NAME="output2"
+    PATH="/AdminHomePage.xhtml" TARGET="rules:#AdminHomePage.xhtml"
+    TITLE="admin" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="actualite::#Acceuil.xhtml" NAME="output3"
+    PATH="/Acceuil.xhtml" TARGET="rules:#Acceuil.xhtml"
+    TITLE="actualite" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#AdminHomePage.xhtml"
+  PATH="/AdminHomePage.xhtml" SHAPE="288,353,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#AdminHomePage.xhtml:0" NAME="item"
+   PATH="/AdminHomePage.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="success::#VisiteurHomePage.xhtml"
+    NAME="output" PATH="/VisiteurHomePage.xhtml"
+    TARGET="rules:#VisiteurHomePage.xhtml" TITLE="success" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="admin::#AdminHomePage.xhtml" NAME="output1"
+    PATH="/AdminHomePage.xhtml" TARGET="rules:#AdminHomePage.xhtml"
+    TITLE="admin" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="inscription::#inscription.xhtml"
+    NAME="output2" PATH="/inscription.xhtml"
+    TARGET="rules:#inscription.xhtml" TITLE="inscription" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="actualite::#Acceuil.xhtml" NAME="output3"
+    PATH="/Acceuil.xhtml" TARGET="rules:#Acceuil.xhtml"
+    TITLE="actualite" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="donnees::#ListerLesDonnees.xhtml"
+    NAME="output4" PATH="/ListerLesDonnees.xhtml"
+    TARGET="rules:#ListerLesDonnees.xhtml" TITLE="donnees" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#ListerLesDonnees.xhtml"
+  PATH="/ListerLesDonnees.xhtml" SHAPE="32,657,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#ListerLesDonnees.xhtml:0" NAME="item"
+   PATH="/ListerLesDonnees.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="success::#VisiteurHomePage.xhtml"
+    NAME="output" PATH="/VisiteurHomePage.xhtml"
+    TARGET="rules:#VisiteurHomePage.xhtml" TITLE="success" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="admin::#AdminHomePage.xhtml" NAME="output1"
+    PATH="/AdminHomePage.xhtml" TARGET="rules:#AdminHomePage.xhtml"
+    TITLE="admin" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="actualite::#Acceuil.xhtml" NAME="output2"
+    PATH="/Acceuil.xhtml" TARGET="rules:#Acceuil.xhtml"
+    TITLE="actualite" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="inscription::#inscription.xhtml"
+    NAME="output3" PATH="/inscription.xhtml"
+    TARGET="rules:#inscription.xhtml" TITLE="inscription" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+</PROCESS>

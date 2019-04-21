@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>TP</display-name>
+  
+  <servlet>
+    <servlet-name>Faces Servlet</servlet-name>
+    <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>Faces Servlet</servlet-name>
+    <url-pattern>/faces/*</url-pattern>
+    <url-pattern>*.xhtml</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<display-name>DisplayImage</display-name>
+  	<servlet-name>DisplayImage</servlet-name>
+  	<servlet-class>com.util.DisplayImage</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>DisplayImage</servlet-name>
+  	<url-pattern>/DisplayImage</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+  	<welcome-file>index.xhtml</welcome-file>
+  </welcome-file-list>
+  
+  <context-param>
+     <param-name>primefaces.FONT_AWESOME</param-name>
+     <param-value>true</param-value>
+  </context-param>
+  
+	<mime-mapping>
+	    <extension>eot</extension>
+	    <mime-type>application/vnd.ms-fontobject</mime-type>
+	</mime-mapping>
+	<mime-mapping>  
+	    <extension>otf</extension>  
+	    <mime-type>font/opentype</mime-type>  
+	</mime-mapping>      
+	<mime-mapping>  
+	    <extension>ttf</extension>  
+	    <mime-type>application/x-font-ttf</mime-type>  
+	</mime-mapping>      
+	<mime-mapping>  
+	    <extension>woff</extension>  
+	    <mime-type>application/x-font-woff</mime-type>  
+	</mime-mapping>
+	<mime-mapping>  
+	    <extension>svg</extension>  
+	    <mime-type>image/svg+xml</mime-type>  
+	</mime-mapping>
+  
+</web-app>

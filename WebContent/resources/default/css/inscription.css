@@ -1,0 +1,30 @@
+@charset "ISO-8859-1";
+
+
+
+
+.container {
+	background-color: #f8f9fa;
+	width: 400px;
+	margin: auto;
+	opacity: 0.8;
+	border: 2px solid black;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.form-control {
+	border: none;
+	width: 300px;
+	background-color: #f8f9fa;
+	border-bottom: 2px solid black;
+	color: black;
+}
+
+.col-xs-12 {
+	margin: auto;
+}
+
+.erreur {
+	color: red;
+}

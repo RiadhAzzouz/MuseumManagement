@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+	
+	
+	
+<h:head>
+	<title>Home Admin</title>
+	<meta charset="utf-8"></meta>
+	<h:outputStylesheet library="default" name="css/bootstrap.css"  />
+	<h:outputStylesheet library="default" name="css/styleIndex.css"  />
+	<h:outputScript library="default" name="js/bootstrap.js"/>
+</h:head>
+	
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+	<div class="container-fluid " >
+	  <a id="menuToggle" href="#">
+	  	<i class="fa fa-bars cfs" ></i>
+	  </a>
+	  <i class="fa fa-bank cfs" style="margin-left: 30px; margin-right: 5px" ></i>
+	  <a id="title" class="navbar-brand" href="#">Musée du Louvre</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNav">
+	    <ul class="navbar-nav">
+	      <li class="nav-item active">
+	        <a class="nav-link" href="#">Acceuil <span class="sr-only">(current)</span></a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Contact</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">A Propos</a>
+	      </li>
+	    </ul>
+	  </div>
+	</div>
+</nav>
+
+
+<div id="wrapper">
+
+<!-- sideBar -->
+	
+	<div id="sideBar-wrapper">
+		<p:graphicImage id="img_museum" library="default" name="images/m.jpg"/>
+		<h:form>
+		<h:commandButton type="submit" class="btn btn-light cmb" value="Actualités" action="#{loginB.actualite}" ><i class="fa fa-newspaper-o" ></i></h:commandButton><br />
+		<h:commandButton type="button" class="btn btn-light cmb" value="Tableau de bord"><i class="fa fa-dashboard" ></i></h:commandButton><br />
+		<h:commandButton type="button" class="btn btn-light cmb" value="Administrateur" onclick="PF('dlg1').show();"><i class="fa fa-ban" ></i></h:commandButton><br />
+		<h:commandButton type="button" class="btn btn-light cmb" value="Se Connecter" onclick="PF('dlg1').show();"><i class="fa fa-home" ></i></h:commandButton><br />
+		<h:commandButton type="submit" class="btn btn-light cmb" value="S'inscrire" action="#{loginB.inscrire}" ><i class="fa fa-user-plus"></i></h:commandButton>	
+		</h:form>
+	</div>
+
+	
+<!-- pageContent -->
+
+	<div id="page-content-wrapper">
+		<div class="container-fluid">
+			<div class="rows">
+				<div class="col-md-12">
+					<header style="border-bottom: 1px solid #A4A4A4; padding-bottom: 10px;">
+						<i class="fa fa-cog" style="font-size: 25px; margin-right: 20px;" ></i><STRONG style="color: #A4A4A4;">ADMINISTRATEUR</STRONG>
+					</header>
+					
+					
+					<div style="margin-top: 20px;">
+						
+							<div id="article" style="margin-right: 120px;">
+								<fieldset>
+									<legend>Ajouter Un Article</legend>
+									<h:form enctype="multipart/form-data">
+									    <p:growl id="messages" showDetail="true" />
+									    
+									    <div class="form-group">
+									    	<h:outputLabel for="Nom" style="font-weight: bold;">Nom</h:outputLabel>
+									  		<h:inputText   id="Nom" pt:placeholder="Nom" class="form-control" required="true" value="#{articleB.art.nom}"/>
+									 	</div>  
+									 	
+										<div class="form-group">
+										    <label for="Description">Description</label>
+										    <h:inputTextarea class="form-control" id="Description" rows="3" pt:placeholder="A propos de l'article" value="#{articleB.art.descrition}"></h:inputTextarea>
+										 </div>							 	
+									 	
+									 	<div class="form-group">
+									    	<h:outputLabel for="nsalle" style="font-weight: bold;">N°Salle</h:outputLabel>
+									  		<h:inputText   id="nsalle" pt:placeholder="N°Salle" class="form-control" required="true" value="#{articleB.art.nsalle}"/>
+									 	</div> 
+									 	
+									    <p:fileUpload value="#{articleB.uploadedFile}" mode="simple" skinSimple="true"/>
+									 	<br/>
+									    <h:commandButton type="submit" value="Submit" class="btn btn-success" ajax="false" actionListener="#{articleB.upload}"/>
+									    
+									</h:form>							
+								</fieldset>
+							
+							</div>
+						
+							<div id="personnel">
+								
+								<fieldset>
+									<legend>Ajouter Personnel</legend>
+									<h:form >
+									    <p:growl id="messages" showDetail="true" />
+									    
+									    <div class="form-group">
+									    	<h:outputLabel for="Nom" style="font-weight: bold;">Nom</h:outputLabel>
+									  		<h:inputText   id="Nom" pt:placeholder="Nom" class="form-control" required="true" value="#{personnelB.pers.nom}"/>
+									 	</div>  
+									 	
+										<div class="form-group">
+							  				<h:outputLabel for="Prenom" style="font-weight: bold;">Prenom</h:outputLabel>
+							  				<h:inputText   id="Prenom" pt:placeholder="Prenom" class="form-control" required="true" value="#{personnelB.pers.prenom}"/>
+										</div>
+							 	
+									 	
+									 	<div class="form-group">
+							  				<h:outputLabel for="poste" style="font-weight: bold;">Poste</h:outputLabel>
+							  				<h:inputText   id="poste" pt:placeholder="poste" class="form-control" required="true" value="#{personnelB.pers.poste}"/>
+										</div>
+										
+										<div class="form-group">
+							  				<h:outputLabel for="salaire" style="font-weight: bold;">Salaire</h:outputLabel>
+							  				<h:inputText   id="salaire" pt:placeholder="salaire" class="form-control" required="true" value="#{personnelB.pers.salaire}"/>
+										</div>
+										
+										<h:commandButton type="submit" class="btn btn-success" value="Ajouter Personnel" actionListener="#{personnelB.ajouter}"/>
+									</h:form>							
+								</fieldset>
+								
+							</div>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+		<h:form><h:commandButton type="submit" class="btn btn-success " action="#{loginB.listDonnees}" value="Lister Les Données" /></h:form>
+	</div>
+
+
+	
+<h:form>
+<p:dialog modal="true" widgetVar="dlg1" width="300" resizable="false">
+    <h3>Login</h3>
+    <p:inputText value="#{loginB.login}" pt:placeholder="Login" style="margin-bottom: 30px; font-size:16px;" />
+    <br/>
+    <p:password value="#{loginB.passWord}" pt:placeholder="Mot de passe" style="margin-bottom: 30px; font-size:16px;" />
+    <br/>
+    <p:commandButton type="submit" value="Connecter" action="#{loginB.connecter}" ></p:commandButton>
+</p:dialog>
+</h:form>
+
+</div>
+
+
+
+<script>
+	document.getElementById('menuToggle').addEventListener('click', function(e){
+  	 e.preventDefault();
+  	var menu = document.getElementById('wrapper') 
+  	menu.classList.toggle('menuDisplayed');
+	});	
+</script>
+
+
+
+</body>	
+
+	
+	
+</html>
